@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About this guide to LinkedIn and GitHub.">
+  <title>About — Connect + Create</title>
+  <style>
+    :root { --ink: #172b4d; --muted: #607087; --blue: #0a66c2; --paper: #f4f7fb; --line: #e5eaf1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .wrap { width: min(900px, calc(100% - 40px)); margin: 0 auto; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+    .brand { color: var(--ink); font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+    .brand span, .eyebrow { color: var(--blue); }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover, nav a[aria-current="page"] { color: var(--blue); }
+    main { margin: 36px 0 72px; padding: clamp(30px, 7vw, 70px); border: 1px solid var(--line); border-radius: 24px; background: white; }
+    .eyebrow { font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 680px; margin: 12px 0 18px; font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.06em; }
+    .lead { max-width: 680px; color: #52647c; font-size: 1.15rem; }
+    h2 { margin: 34px 0 8px; font-size: 1.35rem; letter-spacing: -.03em; }
+    p { color: var(--muted); }
+    .button { display: inline-block; margin-top: 18px; padding: 12px 19px; border-radius: 9px; background: var(--ink); color: white; font-weight: 700; text-decoration: none; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 600px) { .wrap { width: min(100% - 28px, 900px); } header { align-items: flex-start; gap: 16px; } nav { flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; } main { margin-top: 18px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">connect<span>+</span>create</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <div class="eyebrow">About this guide</div>
+      <h1>Make your work easier to discover.</h1>
+      <p class="lead">This page is a starting point for building your online presence and sharing what you do.</p>
+      <h2>Two platforms, one fuller story</h2>
+      <p>LinkedIn can help people learn about your experience, interests, and goals. GitHub lets them explore the projects and code behind your work. Together, they give people a clearer picture of what you do and what you are learning.</p>
+      <h2>Keep it yours</h2>
+      <p>Start with a clear introduction and a project you are proud of. Update your profiles as your skills and interests grow, and connect with people whose work inspires you.</p>
+      <a class="button" href="index.html">Back to the homepage</a>
+    </main>
+    <footer>Made for curious people building their next opportunity.</footer>
+  </div>
+</body>
+</html>
