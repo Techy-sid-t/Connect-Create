@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quick introduction to LinkedIn and GitHub.">
+  <title>LinkedIn &amp; GitHub — Your online presence</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172b4d;
+      --muted: #607087;
+      --blue: #0a66c2;
+      --green: #18864b;
+      --paper: #f4f7fb;
+      --line: #e5eaf1;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+    }
+    .brand { font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; }
+    .brand span { color: var(--blue); }
+    nav { display: flex; gap: 26px; }
+    nav a { color: var(--muted); font-size: .94rem; text-decoration: none; }
+    nav a:hover { color: var(--blue); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin: 22px 0 72px;
+      padding: clamp(42px, 8vw, 88px);
+      border-radius: 28px;
+      background: #e7f1fc;
+    }
+    .hero::after {
+      position: absolute;
+      right: -55px;
+      bottom: -155px;
+      width: 370px;
+      height: 370px;
+      border: 48px solid rgba(10, 102, 194, .09);
+      border-radius: 50%;
+      content: "";
+    }
+    .eyebrow { color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 680px; margin: 12px 0 18px; font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.05; letter-spacing: -.065em; }
+    .hero p { max-width: 570px; margin: 0; color: #52647c; font-size: 1.12rem; }
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 19px;
+      border-radius: 9px;
+      background: var(--ink);
+      color: white;
+      font-size: .94rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #263f65; }
+
+    .section-heading { margin-bottom: 24px; }
+    .section-heading h2 { margin: 0 0 5px; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.045em; }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card {
+      display: flex;
+      min-height: 300px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 12px 32px rgba(23, 43, 77, .04);
+    }
+    .icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border-radius: 13px;
+      color: white;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .linkedin .icon { background: var(--blue); }
+    .github .icon { background: #24292f; }
+    .card h3 { margin: 20px 0 8px; font-size: 1.45rem; letter-spacing: -.03em; }
+    .card p { margin: 0; color: var(--muted); }
+    .card-link { margin-top: auto; padding-top: 22px; color: var(--blue); font-weight: 700; text-decoration: none; }
+    .github .card-link { color: var(--green); }
+    .card-link:hover { text-decoration: underline; }
+
+    .tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin: 54px 0 72px;
+      padding: 22px 24px;
+      border: 1px solid #dcebe2;
+      border-radius: 16px;
+      background: #f0f8f3;
+    }
+    .tip strong { white-space: nowrap; color: #176b3d; }
+    .tip p { margin: 0; color: #4f6859; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 28px, 1080px); }
+      header { align-items: flex-start; gap: 16px; }
+      nav { flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; }
+      .hero { margin: 12px 0 52px; border-radius: 20px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 265px; }
+      .tip { flex-direction: column; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Connect and Create home">connect<span>+</span>create</a>
+      <nav aria-label="Main navigation">
+        <a href="#platforms">Platforms</a>
+        <a href="#tip">Getting started</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">A quick guide</div>
+        <h1 id="hero-title">Build your presence. Share what you make.</h1>
+        <p>LinkedIn and GitHub help you show your work and connect with people. One is built around your professional story; the other brings your code and projects to life.</p>
+        <a class="button" href="#platforms">Explore the platforms <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section id="platforms" aria-labelledby="platforms-title">
+        <div class="section-heading">
+          <div class="eyebrow">Two useful tools</div>
+          <h2 id="platforms-title">Where will you start?</h2>
+          <p>Choose the space that fits what you want to do today.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card linkedin">
+            <div class="icon" aria-hidden="true">in</div>
+            <h3>LinkedIn</h3>
+            <p>A professional networking platform. Create a profile, highlight your experience, follow companies, and build connections in your field.</p>
+            <a class="card-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Visit LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="card github">
+            <div class="icon" aria-hidden="true">⌘</div>
+            <h3>GitHub</h3>
+            <p>A home for software projects. Store and share code, track changes, collaborate with others, and show what you have built.</p>
+            <a class="card-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <aside class="tip" id="tip">
+        <strong>A simple first step</strong>
+        <p>Add a clear introduction to LinkedIn, then pin a project you are proud of on GitHub. Keep both up to date as you learn and grow.</p>
+      </aside>
+    </main>
+
+    <footer>Made for curious people building their next opportunity.</footer>
+  </div>
+</body>
+</html>
