@@ -119,7 +119,23 @@
     }
     .tip strong { white-space: nowrap; color: #176b3d; }
     .tip p { margin: 0; color: #4f6859; }
-    footer { border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: .9rem; }
+    .extra-section { margin: 0 0 64px; }
+    .section-copy { max-width: 720px; margin: 0; color: var(--muted); }
+    .contact-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: white;
+    }
+    .contact-section h2 { margin: 5px 0 8px; font-size: 1.8rem; letter-spacing: -.04em; }
+    .contact-section .button { flex: 0 0 auto; margin: 0; }
+    footer { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: .9rem; }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
     @media (max-width: 650px) {
       .wrap { width: min(100% - 28px, 1080px); }
@@ -129,6 +145,8 @@
       .cards { grid-template-columns: 1fr; }
       .card { min-height: 265px; }
       .tip { flex-direction: column; gap: 5px; }
+      .contact-section { align-items: flex-start; flex-direction: column; padding: 24px; }
+      footer { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -142,6 +160,8 @@
       <a class="brand" href="#top" aria-label="Connect and Create home">connect<span>+</span>create</a>
       <nav aria-label="Main navigation">
         <a href="#platforms">Platforms</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="#tip">Getting started</a>
       </nav>
     </header>
@@ -182,9 +202,10 @@
         <strong>A simple first step</strong>
         <p>Add a clear introduction to LinkedIn, then pin a project you are proud of on GitHub. Keep both up to date as you learn and grow.</p>
       </aside>
+
     </main>
 
-    <footer>Made for curious people building their next opportunity.</footer>
+    <footer>Made for curious people building their next opportunity. <a href="contact.html">Contact us</a></footer>
   </div>
 </body>
 </html>
